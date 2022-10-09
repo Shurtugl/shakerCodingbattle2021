@@ -18,14 +18,34 @@ public class CodingBattle_Shaker2021 {
 		final String lvl6 = "6 - Estimation de toile";
 		final String quit = "7 -Terminer et Quitter";
 		int choix;
-		
+
 		Scanner scan = new Scanner(System.in);
-		do{
-			choix=scan.nextInt();
-		}while (choix<1||choix>7);
 		
-		MainOfLevel1();
+		do {
+			do{
+				System.out.println("Merci de choisir une option : ");
+				System.out.println(lvl1);
+				System.out.println(lvl2);
+				System.out.println(lvl3);
+				System.out.println(lvl4);
+				System.out.println(lvl5);
+				System.out.println(lvl6);
+				System.out.println(quit);
+				choix=scan.nextInt();
+			}while (choix<1||choix>7);
+			
+			switch (choix){
+				case 1 : MainOfLevel1(); break;
+				case 2 : /*MainOfLevel2();*/ break;
+				case 3 : /*MainOfLevel3();*/ break;
+				case 4 : /*MainOfLevel4();*/ break;
+				case 5 : /*MainOfLevel5();*/ break;
+				case 6 : /*MainOfLevel6();*/ break;
+			}
+		}while (choix!=7);
 		
+		
+		scan.close();
 		//fin de menu		
 	}
 	
